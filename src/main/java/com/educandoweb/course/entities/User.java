@@ -1,5 +1,6 @@
 package com.educandoweb.course.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.io.Serializable;
@@ -17,19 +18,20 @@ public class User implements Serializable {
     private Long id;
     private String name;
     private String email;
-    private String nome;
+    private String phone;
     private String password;
+    @JsonIgnore
     @OneToMany(mappedBy = "client")
     private List<Order> orders = new ArrayList<>();
 
     public User(){
     }
 
-    public User(Long id, String name, String email, String nome, String password) {
+    public User(Long id, String name, String email, String phone, String password) {
         this.id = id;
         this.name = name;
         this.email = email;
-        this.nome = nome;
+        this.phone = phone;
         this.password = password;
     }
 
@@ -58,11 +60,11 @@ public class User implements Serializable {
     }
 
     public String getNome() {
-        return nome;
+        return phone;
     }
 
     public void setNome(String nome) {
-        this.nome = nome;
+        this.phone = nome;
     }
 
     public String getPassword() {
