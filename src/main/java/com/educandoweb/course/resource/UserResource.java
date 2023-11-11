@@ -1,4 +1,4 @@
-package com.educandoweb.course.Resource;
+package com.educandoweb.course.resource;
 
 import com.educandoweb.course.entities.User;
 import com.educandoweb.course.services.UserService;
