@@ -58,13 +58,13 @@ public class User implements Serializable {
     public void setEmail(String email) {
         this.email = email;
     }
-
-    public String getNome() {
+    
+    public String getPhone() {
         return phone;
     }
 
-    public void setNome(String nome) {
-        this.phone = nome;
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
     public String getPassword() {
